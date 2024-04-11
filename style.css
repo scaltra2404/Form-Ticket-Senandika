@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    color: #fff;
+    background-image: url(img/bg.png);
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+}
+
+.content img {
+    height: 50vh;
+    margin-top: 100px;
+}
+
+.content .desc {
+    margin-top: 40px;
+    width: 70%;
+    text-align: justify;
+}
+
+.content .cta {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    width: 60%;
+}
+
+.cta h2 {
+    margin-top: 50px;
+    line-height: 1;
+    font-size: 20pt;
+}   
+
+.cta p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.cta button {
+    padding: 7px;
+    color: #fff;
+    background-color: transparent;
+   
+}
+
+.cta a {
+    height: 30px;
+    font-size: 16px;
+    display: grid;
+    align-items: center;
+    padding: 7px;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: 0.3s;   
+}
+
+.cta a:hover {
+    color: black;
+    background-color: #ffffff;
+}
+
+.regulertitle {
+    text-align: center;
+}
+
+.regulerform {
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: #ffffff05;
+    border: 2px solid #fff;
+}
+
+.regulerform label {
+    margin-top: 20px;
+}
+
+.regulerform input { 
+    color: #fff;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px ;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.regulerform button {
+    color: #fff;
+    padding:10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+
+.difference {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.difference div {
+    padding: 30px;
+    margin-top: 30px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.difference .reguler {
+    background-color: #041441a1;
+}
+
+.reguler ul li:nth-child(2) {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.reguler ul li:nth-child(3) {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.difference .vip {
+    background-color: #ffb20ba1;
+}
+
+.trailer {
+    margin-top: 70px;
+    margin-bottom: 50vh;
+}
+
+#norek-box {
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #041441a1;
+}
+
+#norek-box input {
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+#norek-box .cta-send {
+    color: #041441a1;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 30px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+}
+
+.undisplayed {
+    display: none;
+}
