@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body style="padding: 50px;">
+    <body style="padding: 50px; background-size: 90vh;">
         <h2 class="regulertitle">Form Pembelian Tiket VIP Senandika</h2>
         <p style="text-align: center; margin-top: 10px; opacity: 0.6;"><i>Note : VIP dapat reserved seat Reguler disebelahnya</i></p>
         <div class="regulerform">
@@ -19,10 +19,20 @@
             <label for="nomor">Pilih Nomor Seat VIP</label>
             <input type="text" id="seat"><br><br>
             <label for="reserved">Reguler Reserved : <i>Maks 2 seat</i></label><br>
-            <input type="number" id="reguler-reserved" min="0" max="2" value="0"><br><br>
-            <label for="payment">Pemabayaran :</label><br>
-            <button onclick="sentToTransferVip()">Transfer</button>
+            <input type="number" id="reguler-reserved" style="padding: 10px;" step="1" min="0" max="1" value="0">
+            <button id="calculate" onclick="calculateVip(); overload()">Enter</button><br><br>
+            <label for="total">Total :</label>
+            <input type="text" id="total" disabled value="" style="border: none;"><br><br>
+            <label for="payment">Pembayaran :</label><br>
+            <button onclick="showUpNorek()">Transfer</button>
             <button onclick="sentToVip()">Tunai</button>
+        </div>
+
+        <div id="norek-box" class="undisplayed">
+            <h3>Transfer Ke Nomor BCA :</h3>
+            <input style="background-color: transparent; border: none; color: #fff; font-weight: 700; font-size: 20px; width: 40%;" type="text" id="norek" value="0201908921" disabled> 
+            <button style="background-color: transparent; border: 1px solid #fff; padding: 10px; color: #fff; border-radius: 7px;" onclick="copyTheText()">copy number</button>
+            <button class="cta-send" onclick="sentToTransferVip()"><h4>Kirim Bukti Transfer</h4></button>
         </div>
         
 

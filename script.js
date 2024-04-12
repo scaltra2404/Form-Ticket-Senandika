@@ -40,14 +40,15 @@ function sentToTransferVip(){
     let jenis = "VIP";
 
     let name = document.getElementById('name').value;
-    let jumlah = document.getElementById('jumlah').value;
+    let seat = document.getElementById('seat').value;
+    let reserved = document.getElementById('reguler-reserved').value;
 
     var url = "https://wa.me/" + number + "?text="
     + "Saya%20ingin%20membeli%20tiket%20Senandika%20berikut:%0a"
     + "Nama : " +name+ "%0a"
     + "Jenis :" +jenis+ "%0a"
-    + "Jumlah :" +jumlah+ "%0a%0a"
-    + "Saya%20ingin%20melihat%20Seat%20Tempat%20duduk%20Senandika%20terlebih%20dahulu";
+    + "Seat :" +seat+ "%0a"
+    + "Regular Reserved :" +reserved+ +"seat"+"%0a%0a";
 
     window.open(url, '_blank').focus();
 }
@@ -64,8 +65,8 @@ function sentToVip(){
     + "Saya%20ingin%20membeli%20tiket%20Senandika%20berikut:%0a"
     + "Nama : " +name+ "%0a"
     + "Jenis :" +jenis+ "%0a"
-    + "Jenis :" +seat+ "%0a"
-    + "Jenis :" +reserved+ "%0a%0a";
+    + "Seat :" +seat+ "%0a"
+    + "Regular Reserved :" +reserved+ +"seat"+"%0a%0a";
 
     window.open(url, '_blank').focus();
 }
@@ -76,6 +77,17 @@ function calculateTotal() {
     let harga = 20;
 
     total = document.getElementById('total').value = "Rp. "+jumlah*harga + ".000";
+
+    console.log(total);
+}
+
+function calculateVip() {
+    let jumlah = document.getElementById('reguler-reserved').value;
+    let total = document.getElementById('total').value;
+    let hargaVip = 25;
+    let hargaReserved = 20; 
+
+    total = document.getElementById('total').value = "Rp. "+(hargaVip+jumlah*hargaReserved) + ".000";
 
     console.log(total);
 }
@@ -98,4 +110,15 @@ function copyTheText() {
 function showUpNorek(){
     let norek = document.getElementById('norek-box');
     norek.classList.remove("undisplayed");
+}
+
+
+function overload() {
+    let reserved = document.getElementById('reguler-reserved').value;
+    let buttonCalculate = document.getElementById('calculate');
+    if (reserved > 2){
+        alert("Reguler Reserved Maksimal 2 Seat");
+        buttonCalculate.removeEventListener("click", calculateVip());
+        let total = document.getElementById('total').value = 0;
+    } 
 }
