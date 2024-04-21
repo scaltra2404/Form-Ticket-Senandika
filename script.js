@@ -11,6 +11,7 @@ function sentToWhatsapp(){
     + "Nama : " +name+ "%0a"
     + "Jenis :" +jenis+ "%0a"
     + "Jumlah :" +jumlah+ "%0a"
+    + "Pengambilan tiket :"+ "%0a"
     + "Pembayaran : " +bayar+ "%0a%0a";
 
     window.open(url, '_blank').focus();
@@ -29,6 +30,7 @@ function sentToTransfer(){
     + "Nama : " +name+ "%0a"
     + "Jenis :" +jenis+ "%0a"
     + "Jumlah :" +jumlah+ "%0a"
+    + "Pengambilan tiket :"+ "%0a"
     + "Pembayaran : " +bayar+ "%0a%0a"
     + "berikut%20ini%20bukti%20Transfernya";
 
@@ -66,7 +68,7 @@ function sentToVip(){
     + "Nama : " +name+ "%0a"
     + "Jenis :" +jenis+ "%0a"
     + "Seat :" +seat+ "%0a"
-    + "Regular Reserved :" +reserved+ +"seat"+"%0a%0a";
+    + "Regular Reserved :"+reserved+"seat"+"%0a%0a";
 
     window.open(url, '_blank').focus();
 }
